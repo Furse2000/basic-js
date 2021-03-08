@@ -1,7 +1,9 @@
+
 const CustomError = require("../extensions/custom-error");
 
 module.exports = function createDreamTeam(memb) {
  let temp='';
+ let n=228;
  
   for(let i=0;i<memb.length;i++)
   {
@@ -15,6 +17,7 @@ module.exports = function createDreamTeam(memb) {
       { temp=memb[i];
         temp.splice(j,1);
         memb[i]=temp;
+        j--;
       }
     }
     memb[i]=memb[i][0];
@@ -30,9 +33,9 @@ module.exports = function createDreamTeam(memb) {
     break;
   }
 */
-  if(memb.sort())
+  if(memb.sort()!='')
   {
- return memb.join('');
+ return memb.join('').toUpperCase();
  //temp=memb.String; 
   //return temp.toUpperCase();
   }
